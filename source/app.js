@@ -30,9 +30,9 @@ app.get('', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-  res.render('About', {
-    link: 'Nate',
-    title: 'About Me'
+  res.render('about', {
+    title: 'About Me',
+    link: 'Nate'
   })
 })
 
@@ -40,8 +40,7 @@ app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help Page',
     helpText: "Go to /about",
-    name: "Loo",
-    link: 'https://www.example.com'
+    link: 'Nate'
   })
 })
 
