@@ -9,10 +9,11 @@ const forecast = (latitude, longitude, callback) => {
   } else if (response.body.error) {
     callback('Unable to find loaction', undefined)
   } else (
-    callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degrees. There is a ' + response.body.currently.precipProbability + '% chance of rain.'
+    callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degrees. There is a ' + response.body.currently.precipProbability * 100 + '% chance of rain.'
     )
   )
   })
+  
 }
 
 module.exports = forecast
